@@ -30,7 +30,7 @@ $ar_nilai = [$ns1,$ns2,$ns3];
         echo '<td>'.$nilai['uas'].'</td>';
         echo '<td>'.$nilai['tugas'].'</td>';
         echo '<tr/>';
-        $nomor++;
+        $nomor++; 
     }
     ?>
 </tbody>
