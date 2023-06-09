@@ -20,7 +20,3 @@ echo "<br/>Nilai Tugas Praktikum : $tugas";
 echo "<br/>Keterangan : $keterangan";
 echo "<br/>Grade : $grade";
 echo "<br/>Data Telah di $proses";
-?>
-    </div>
-</body>
-</html>
