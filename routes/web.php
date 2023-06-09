@@ -51,7 +51,7 @@ Route::post('/output', [InputController::class, 'output']);
 Route::get('/form', [FormController::class, 'index']);
 Route::post('/form', [FormController::class, 'hasil']);
 
-// praktikum 10 
+// praktikum 10 & 11
 Route::prefix('/dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'index']);
     Route::get('/produk', [ProdukController::class, 'index']);
