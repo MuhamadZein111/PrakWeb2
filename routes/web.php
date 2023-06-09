@@ -57,4 +57,23 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/produk', [ProdukController::class, 'index']);
     Route::get('/kategori', [KategoriProdukController::class, 'index']);
     Route::get('/pesanan', [PesananController::class, 'index']);
+
+    // praktikum 12
+    Route::get('/produk/create', [ProdukController::class, 'create']);
+    Route::post('/produk/store', [ProdukController::class, 'store']);
+    Route::get('/produk/edit/{id}', [ProdukController::class, 'edit']);
+    Route::post('/produk/update', [ProdukController::class, 'update']);
+    Route::get('/produk/delete/{id}', [ProdukController::class, 'destroy']);
+
+    Route::get('/kategori/create', [KategoriProdukController::class, 'create']);
+    Route::post('/kategori/store', [KategoriProdukController::class, 'store']);
+    Route::get('/kategori/edit/{id}', [KategoriProdukController::class, 'edit']);
+    Route::post('/kategori/update', [KategoriProdukController::class, 'update']);
+    Route::get('/kategori/delete/{id}', [KategoriProdukController::class, 'destroy']);
+
+    Route::get('/pesanan/create', [PesananController::class, 'create']);
+    Route::post('/pesanan/store', [PesananController::class, 'store']);
+    Route::get('/pesanan/edit/{id}', [PesananController::class, 'edit']);
+    Route::post('/pesanan/update', [PesananController::class, 'update']);
+    Route::get('/pesanan/delete/{id}', [PesananController::class, 'destroy']);
 });
