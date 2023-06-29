@@ -4,7 +4,7 @@
               <div class="sb-sidenav-menu">
                   <div class="nav">
                       <div class="sb-sidenav-menu-heading">Core</div>
-                      <a class="nav-link" href="{{ url('/dashboard') }}">
+                      <a class="nav-link" href="{{ url('/admin/dashboard') }}">
                           <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                           Dashboard
                       </a>
@@ -20,9 +20,9 @@
                           data-bs-parent="#sidenavAccordion">
                           <nav class="sb-sidenav-menu-nested nav">
 
-                              <a class="nav-link" href="{{ url('/dashboard/kategori') }}">Kategori Produk</a>
-                              <a class="nav-link" href="{{ url('/dashboard/produk') }}">Kumpulan Produk</a>
-                              <a class="nav-link" href="{{ url('/dashboard/pesanan') }}">Kumpulan Pesanan</a>
+                              <a class="nav-link" href="{{ url('/admin/kategori') }}">Kategori Produk</a>
+                              <a class="nav-link" href="{{ url('/admin/produk') }}">Kumpulan Produk</a>
+                              <a class="nav-link" href="{{ url('/admin/pesanan') }}">Kumpulan Pesanan</a>
 
                           </nav>
                       </div>
