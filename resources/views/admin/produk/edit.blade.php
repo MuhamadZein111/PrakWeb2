@@ -1,5 +1,6 @@
 @extends('admin.layout.app')
 @section('dashboard')
+    @if (Auth::user()->role == 'admin')
     <h1 class="mt-4">Produk</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -73,4 +74,5 @@
             </form>
         </div>
     </div>
+    @endif
 @endsection

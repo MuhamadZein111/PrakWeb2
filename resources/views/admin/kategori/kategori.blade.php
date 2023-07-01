@@ -11,7 +11,9 @@
             Data Table
         </div>
         <div class="card-body">
-            <a href="{{url('/dashboard/kategori/create')}}" class="btn btn-primary">Tambah data</a>
+            @if (Auth::user()->role == 'admin')
+                <a href="{{ url('/dashboard/kategori/create') }}" class="btn btn-primary">Tambah data</a>
+            @endif
             <table id="datatablesSimple">
                 <thead>
                     <tr>
@@ -29,8 +31,12 @@
                             <td>{{ $no++ }}</td>
                             <td>{{ $kat->nama }}</td>
                             <td>
-                                <a href="{{ url('/dashboard/kategori/edit/' . $kat->id) }}" class="btn btn-warning">Edit</a>
-                                <a href="{{ url('/dashboard/kategori/delete/' . $kat->id) }}" class="btn btn-danger">Delete</a>
+                                @if (Auth::user()->role == 'admin')
+                                    <a href="{{ url('/dashboard/kategori/edit/' . $kat->id) }}"
+                                        class="btn btn-warning">Edit</a>
+                                    <a href="{{ url('/dashboard/kategori/delete/' . $kat->id) }}"
+                                        class="btn btn-danger">Delete</a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

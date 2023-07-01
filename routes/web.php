@@ -53,7 +53,7 @@ Route::post('/output', [InputController::class, 'output']);
 Route::get('/form', [FormController::class, 'index']);
 Route::post('/form', [FormController::class, 'hasil']);
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'role:manager,admin']], function () {
     // praktikum 10 & 11
     Route::prefix('/admin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index']);
